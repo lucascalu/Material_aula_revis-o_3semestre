@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>POSTAGENS</title>
+  <link rel="stylesheet" type="text/css" href="/style.css">
+</head>
+<body>
+  <h1>POSTAGENS</h1>
+
+  <!-- Create Form -->
+  <h2>Criar postagens</h2>
+  <form action="/add" method="POST">
+    <input type="text" name="name" placeholder="Name" required>
+    <button type="submit">Add Post</button>
+  </form>
+
+  <!--  List -->
+  
+  <h2>Posts</h2>
+  <ul>
+    <%postg.forEach(a => { %>
+      <li>
+        <strong><%= a.name %></strong> 
+         
+        <a href="/delete/<%= a.id %>">Delete</a>
+      </li>
+    <% });%>
+  </ul> 
+ 
+ 
+ 
+ <a href="/logout">Sair</a>
+ 
+  
+</body>
+</html>
